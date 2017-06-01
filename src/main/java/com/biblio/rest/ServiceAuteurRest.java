@@ -20,6 +20,8 @@ import org.springframework.stereotype.Component;
 import com.biblio.entity.Auteur;
 import com.biblio.service.IService;
 
+import io.swagger.annotations.Api;
+
 
 
 @Path("/auteurs")
@@ -28,6 +30,7 @@ import com.biblio.service.IService;
 @CrossOriginResourceSharing(allowAllOrigins=true)
 @Component // ou @Service (info :herite de component) : pour prise en charge
 			// Spring
+@Api(value="Hello World", description="Hello World Controller")
 public class ServiceAuteurRest implements ServiceRest<Auteur> {
 
 	@Autowired
